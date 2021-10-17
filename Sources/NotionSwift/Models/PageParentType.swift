@@ -40,7 +40,7 @@ extension PageParentType: Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {
         case .database(let value):
-            try container.encode(CodingKeys.databaseId.stringValue, forKey: .type)
+            // try container.encode(CodingKeys.databaseId.stringValue, forKey: .type)
             try container.encode(value, forKey: .databaseId)
         case .page(let value):
             try container.encode(CodingKeys.pageId.stringValue, forKey: .type)
